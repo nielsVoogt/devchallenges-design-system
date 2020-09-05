@@ -1,6 +1,8 @@
 <template>
   <article>
-    <header>{{ title }}</header>
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
     <slot />
     <footer>Niels Voogt @ DevChallenges.io</footer>
   </article>
@@ -13,4 +15,3 @@ export default {
 };
 </script>
 
-<style></style>

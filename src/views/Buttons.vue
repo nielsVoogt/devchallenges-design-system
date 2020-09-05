@@ -1,5 +1,5 @@
 <template>
-  <Page title="buttons">
+  <Page title="Buttons">
     <Button />
   </Page>
 </template>

@@ -1,14 +1,55 @@
-nav {
-  padding: 30px;
-  width: 225px;
-  background: #fafbfd;
+.design-system {
+  display: grid;
+  grid-template-columns: 15em auto;
+  height: 100%;
+  $design-system-padding: 2.5em;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  &__navigation {
+    padding: $design-system-padding;
+    background: #fafbfd;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    svg {
+      width: 7.5em;
+      display: block;
+      margin-block-end: 2em;
+    }
+
+    nav {
+      margin-left: -1em;
+      margin-right: -1em;
+    }
+
+    a {
+      display: block;
+      color: #9e9e9e;
+      padding: 1em;
+      font-weight: 500;
+
+      &:hover {
+        color: darken(#9e9e9e, 10%);
+      }
+
+      &.router-link-exact-active {
+        color: #090f31;
+      }
+    }
+  }
+
+  &__content {
+    padding: $design-system-padding;
+
+    header {
+      margin-block-end: 3em;
+
+      h1 {
+        margin-block-start: -0.25em;
+        margin-block-end: 0;
+      }
+    }
+
+    footer {
+      margin-block-start: 2em;
+      color: #a9a9a9;
     }
   }
 }
