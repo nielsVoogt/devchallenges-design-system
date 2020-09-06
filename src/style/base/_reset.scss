@@ -11,6 +11,12 @@ applet,
 object,
 iframe,
 p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 blockquote,
 pre,
 a,
@@ -120,11 +126,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-// -------- PERSONAL ADDITIONS
-
-a {
-  text-decoration: none;
-  font-weight: 500;
 }

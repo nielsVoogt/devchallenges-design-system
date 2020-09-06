@@ -11,7 +11,9 @@
 <script>
 export default {
   name: "Page",
-  props: ["title"],
+  props: {
+    title: String,
+  },
 };
 </script>
 

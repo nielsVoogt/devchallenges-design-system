@@ -60,4 +60,3 @@
     />
   </svg>
 </template>
-
