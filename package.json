@@ -10,6 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-code-highlight": "^0.7.5",
+    "vue-fragment": "^1.5.1",
     "vue-material-design-icons": "^4.9.0",
     "vue-router": "^3.2.0"
   },

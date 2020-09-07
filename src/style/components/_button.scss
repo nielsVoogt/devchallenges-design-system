@@ -1,0 +1,129 @@
+// ----------- BUTTON RESET
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+// ----------- BUTTON STYLES
+
+.btn {
+  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+  border-radius: 0.375em;
+  padding: 0.5em 1em;
+  padding: 1ex 1em 1ex;
+  cursor: pointer;
+
+  $color-default: #e0e0e0;
+  $color-primary: #2962ff;
+  $color-secondary: #455a64;
+  $color-danger: #d32f2f;
+
+  // ---- DEFAULT STYLES
+
+  background: $color-default;
+  color: #3f3f3f;
+
+  &:hover,
+  &:focus {
+    background: darken($color-default, 10%);
+  }
+
+  // -------------- ICON SPACING
+
+  .material-design-icon + span,
+  span + .material-design-icon {
+    margin-left: 0.25em;
+  }
+
+  // -------------- VARIANTS
+
+  &--variant {
+    &-outline {
+      background: none;
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      box-shadow: none;
+
+      &:hover {
+        background: rgba($color-primary, 0.1);
+      }
+    }
+
+    &-text {
+      background: none;
+      box-shadow: none;
+      color: $color-primary;
+
+      &:hover,
+      &:focus {
+        background: rgba($color-primary, 0.1);
+      }
+    }
+  }
+
+  // -------------- COLOR
+
+  @mixin buttonColorStyles($color) {
+    background: $color;
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+      background: darken($color, 10%);
+    }
+  }
+
+  &--color {
+    &-primary {
+      @include buttonColorStyles($color-primary);
+    }
+
+    &-secondary {
+      @include buttonColorStyles($color-secondary);
+    }
+
+    &-danger {
+      @include buttonColorStyles($color-danger);
+    }
+  }
+
+  // -------------- SIZES
+
+  &--size {
+    &-sm {
+      font-size: 0.75em;
+    }
+
+    &-md {
+      font-size: 0.875em;
+    }
+
+    &-lg {
+      font-size: 1.125em;
+    }
+  }
+
+  // -------------- NO SHADOW
+
+  &--no-shadow {
+    box-shadow: none;
+  }
+
+  // -------------- DISABLED
+
+  &[disabled] {
+    pointer-events: none;
+    position: relative;
+    opacity: 0.5;
+  }
+}
