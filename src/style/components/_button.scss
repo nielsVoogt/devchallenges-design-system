@@ -1,27 +1,26 @@
 // ----------- BUTTON RESET
 
 button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
+  -webkit-appearance: none;
   background: transparent;
+  border: none;
   color: inherit;
   font: inherit;
   line-height: inherit;
+  margin: 0;
   outline: none;
-  -webkit-appearance: none;
+  overflow: visible;
+  padding: 0;
+  width: auto;
 }
 
 // ----------- BUTTON STYLES
 
 .btn {
-  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
   border-radius: 0.375em;
-  padding: 0.5em 1em;
-  padding: 1ex 1em 1ex;
+  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
   cursor: pointer;
+  padding: 1ex 1em;
 
   $color-default: #e0e0e0;
   $color-primary: #2962ff;
@@ -33,8 +32,7 @@ button {
   background: $color-default;
   color: #3f3f3f;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background: darken($color-default, 10%);
   }
 
@@ -42,48 +40,21 @@ button {
 
   .material-design-icon + span,
   span + .material-design-icon {
-    margin-left: 0.25em;
-  }
-
-  // -------------- VARIANTS
-
-  &--variant {
-    &-outline {
-      background: none;
-      border: 1px solid $color-primary;
-      color: $color-primary;
-      box-shadow: none;
-
-      &:hover {
-        background: rgba($color-primary, 0.1);
-      }
-    }
-
-    &-text {
-      background: none;
-      box-shadow: none;
-      color: $color-primary;
-
-      &:hover,
-      &:focus {
-        background: rgba($color-primary, 0.1);
-      }
-    }
+    margin-inline-start: 0.25em;
   }
 
   // -------------- COLOR
 
-  @mixin buttonColorStyles($color) {
-    background: $color;
-    color: #ffffff;
-
-    &:hover,
-    &:focus {
-      background: darken($color, 10%);
-    }
-  }
-
   &--color {
+    @mixin buttonColorStyles($color) {
+      background: $color;
+      color: #ffffff;
+
+      &:hover {
+        background: darken($color, 10%);
+      }
+    }
+
     &-primary {
       @include buttonColorStyles($color-primary);
     }
@@ -94,6 +65,69 @@ button {
 
     &-danger {
       @include buttonColorStyles($color-danger);
+    }
+  }
+
+  // -------------- VARIANTS
+
+  &--variant {
+    &-outline {
+      @mixin buttonOutlineStyles($color) {
+        background: none;
+        box-shadow: 0 0 0 1px $color inset;
+        color: $color;
+
+        &:hover {
+          background: rgba($color, 0.1);
+        }
+      }
+
+      &[class$="color-default"] {
+        @include buttonOutlineStyles($color-default);
+        color: inherit;
+      }
+
+      &[class$="color-primary"] {
+        @include buttonOutlineStyles($color-primary);
+      }
+
+      &[class$="color-secondary"] {
+        @include buttonOutlineStyles($color-secondary);
+      }
+
+      &[class$="color-danger"] {
+        @include buttonOutlineStyles($color-danger);
+      }
+    }
+
+    &-text {
+      @mixin buttonTextStyles($color) {
+        background: none;
+        box-shadow: none;
+        color: $color;
+
+        &:hover,
+        &:focus {
+          background: rgba($color, 0.1);
+        }
+      }
+
+      &[class$="color-default"] {
+        @include buttonTextStyles($color-default);
+        color: inherit;
+      }
+
+      &[class$="color-primary"] {
+        @include buttonTextStyles($color-primary);
+      }
+
+      &[class$="color-secondary"] {
+        @include buttonTextStyles($color-secondary);
+      }
+
+      &[class$="color-danger"] {
+        @include buttonTextStyles($color-danger);
+      }
     }
   }
 
@@ -122,8 +156,8 @@ button {
   // -------------- DISABLED
 
   &[disabled] {
+    opacity: 0.5;
     pointer-events: none;
     position: relative;
-    opacity: 0.5;
   }
 }

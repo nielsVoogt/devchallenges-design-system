@@ -1,32 +1,32 @@
 // ------------------ DESIGN SYSTEM LAYOUT
 
 .design-system {
+  $design-system-padding: 2.5em;
   display: grid;
   grid-template-columns: 15em auto;
   height: 100%;
-  $design-system-padding: 2.5em;
 
   // ------------------ NAVIGATION
 
   &__navigation {
-    padding: $design-system-padding;
     background: #fafbfd;
+    padding: $design-system-padding;
 
     svg {
-      width: 7.5em;
       display: block;
       margin-block-end: 2em;
+      width: 7.5em;
     }
 
     nav {
-      margin-left: -1em;
-      margin-right: -1em;
+      margin-inline-start: -1em;
+      margin-inline-end: -1em;
 
       a {
-        display: block;
         color: #9e9e9e;
-        padding: 1em;
+        display: block;
         font-weight: 500;
+        padding: 1em;
 
         &:hover {
           color: darken(#9e9e9e, 15%);
@@ -42,21 +42,50 @@
   // ------------------ CONTENT
 
   &__content {
+    overflow-x: auto;
+    overflow-y: scroll;
     padding: $design-system-padding;
 
     header {
       margin-block-end: 3em;
 
       h1 {
-        margin-block-start: -0.5em;
         font-size: 1.5rem;
+        margin-block-start: -0.5em;
       }
     }
 
     footer {
-      margin-block-start: 2em;
       color: #a9a9a9;
       font-size: 0.875rem;
+      margin-block-start: 2em;
+    }
+  }
+}
+
+// ------------------ DESIGN SYSTEM ELEMENT ROW
+
+.design-system-element-row {
+  border-bottom: 1px solid #ececec;
+  margin-block-end: 2em;
+  padding: 0 0 2em;
+
+  &__description {
+    font-size: 14px;
+    max-width: 50em;
+
+    strong {
+      display: block;
+      margin-block-end: 0.25em;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin-block-start: 2em;
+
+    * + * {
+      margin-inline-start: 2em;
     }
   }
 }

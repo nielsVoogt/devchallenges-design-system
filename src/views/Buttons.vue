@@ -2,148 +2,226 @@
   <Page title="Buttons">
     <!-- DEFAULT -->
     <div class="design-system-element-row">
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button /&gt;</pre>
-        </code>
-        <Button />
+      <div class="design-system-element-row__description">
+        <strong>Variants</strong>
+        <p>
+          There are three button variants that you can use. You can change the button variant by adding the
+          <code>variant</code> prop, this prop accepts the following variants:
+          <code>default</code>,
+          <code>outline</code> and
+          <code>text</code>
+        </p>
       </div>
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button variant=&quot;outline&quot; /&gt;</pre>
-        </code>
-        <Button variant="outline" />
-      </div>
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button variant=&quot;text&quot; /&gt;</pre>
-        </code>
-        <Button variant="text" />
-      </div>
-    </div>
-
-    <!-- OUTLINE -->
-    <div class="design-system-element-row"></div>
-
-    <!-- TEXT -->
-    <div class="design-system-element-row"></div>
-
-    <!-- NO SHADOW  -->
-    <div class="design-system-element-row">
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button disableShadow /&gt;</pre>
-        </code>
-        <Button disableShadow color="primary" />
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button color="primary" />
+        </div>
+        <div class="design-system-element">
+          <Button variant="outline" color="primary" />
+        </div>
+        <div class="design-system-element">
+          <Button variant="text" color="primary" />
+        </div>
       </div>
     </div>
 
     <!-- DISABLED -->
     <div class="design-system-element-row">
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button disabled/&gt;</pre>
-        </code>
-        <Button disabled />
+      <div class="design-system-element-row__description">
+        <strong>Disabled</strong>
+        <p>
+          Every button variant can be disabled by adding the
+          <code>disabled</code> attribute
+        </p>
       </div>
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button disabled variant=&quot;outline&quot; /&gt;</pre>
-        </code>
-        <Button disabled variant="outline" />
-      </div>
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button disabled variant=&quot;text&quot; /&gt;</pre>
-        </code>
-        <Button disabled variant="text" />
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button disabled color="primary" />
+        </div>
+        <div class="design-system-element">
+          <Button disabled variant="outline" color="primary" />
+        </div>
+        <div class="design-system-element">
+          <Button disabled variant="text" color="primary" />
+        </div>
       </div>
     </div>
 
     <!-- SIZE -->
     <div class="design-system-element-row">
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button size=&quot;sm&quot; /&gt;</pre>
-        </code>
-        <Button color="primary" size="sm" />
+      <div class="design-system-element-row__description">
+        <strong>Sizing</strong>
+        <p>
+          There are three button sizes that you can use. You can change the button size by adding the
+          <code>size</code> prop, this prop accepts the following sizes:
+          <code>sm</code>,
+          <code>md</code> and
+          <code>lg</code>
+        </p>
       </div>
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button size=&quot;md&quot; /&gt;</pre>
-        </code>
-        <Button color="primary" size="md" />
-      </div>
-      <div class="design-system-element">
-        <code>
-          <pre>&lt;Button size=&quot;lg&quot; /&gt;</pre>
-        </code>
-        <Button color="primary" size="lg" />
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button color="primary" size="sm" />
+        </div>
+        <div class="design-system-element">
+          <Button color="primary" size="md" />
+        </div>
+        <div class="design-system-element">
+          <Button color="primary" size="lg" />
+        </div>
       </div>
     </div>
 
     <!-- COLORS -->
     <div class="design-system-element-row">
-      <div class="design-system-element">
-        <code>
-          <pre></pre>
-        </code>
-        <Button color="default" />
+      <div class="design-system-element-row__description">
+        <strong>Colors</strong>
+        <p>
+          There are five button colors. You can change the button color by adding the
+          <code>color</code> prop, this prop accepts the following colors:
+          <code>default</code>,
+          <code>primary</code>,
+          <code>secondary</code> and
+          <code>danger</code>
+        </p>
       </div>
-      <div class="design-system-element">
-        <code>
-          <pre></pre>
-        </code>
-        <Button color="primary" />
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button color="default" />
+        </div>
+        <div class="design-system-element">
+          <Button color="primary" />
+        </div>
+        <div class="design-system-element">
+          <Button color="secondary" />
+        </div>
+        <div class="design-system-element">
+          <Button color="danger" />
+        </div>
       </div>
-      <div class="design-system-element">
-        <code>
-          <pre></pre>
-        </code>
-        <Button color="secondary" />
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button color="default" variant="outline" />
+        </div>
+        <div class="design-system-element">
+          <Button color="primary" variant="outline" />
+        </div>
+        <div class="design-system-element">
+          <Button color="secondary" variant="outline" />
+        </div>
+        <div class="design-system-element">
+          <Button color="danger" variant="outline" />
+        </div>
       </div>
-      <div class="design-system-element">
-        <code>
-          <pre></pre>
-        </code>
-        <Button color="danger" />
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button color="default" variant="text" />
+        </div>
+        <div class="design-system-element">
+          <Button color="primary" variant="text" />
+        </div>
+        <div class="design-system-element">
+          <Button color="secondary" variant="text" />
+        </div>
+        <div class="design-system-element">
+          <Button color="danger" variant="text" />
+        </div>
       </div>
     </div>
 
-    <Button>
-      <template v-slot:icon-left>
-        <AccountIcon />
-      </template>
-      My account
-    </Button>
+    <div class="design-system-element-row">
+      <div class="design-system-element-row__description">
+        <strong>Icons</strong>
+        <p>
+          Icons are not bound to the button component. There are two named slots available for icon alignment,
+          <code>icon-left</code> and
+          <code>icon-right</code>. Use these slots to add the icon you need, icons inherit size and color.
+        </p>
+      </div>
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button color="default">
+            <template v-slot:icon-left>
+              <AccountIcon />
+            </template>
+            My account
+          </Button>
+        </div>
+        <div class="design-system-element">
+          <Button color="primary">
+            <template v-slot:icon-left>
+              <CartPlusIcon />
+            </template>
+            Add to shoppingcart
+          </Button>
+        </div>
+        <div class="design-system-element">
+          <Button color="secondary">
+            <template v-slot:icon-left>
+              <AccountPlusIcon />
+            </template>
+            Add account
+          </Button>
+        </div>
+        <div class="design-system-element">
+          <Button color="danger">
+            <template v-slot:icon-left>
+              <DeleteIcon />
+            </template>
+            Delete
+          </Button>
+        </div>
+      </div>
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button color="default">
+            My account
+            <template v-slot:icon-right>
+              <AccountIcon />
+            </template>
+          </Button>
+        </div>
+        <div class="design-system-element">
+          <Button color="primary">
+            Add to shoppingcart
+            <template v-slot:icon-right>
+              <CartPlusIcon />
+            </template>
+          </Button>
+        </div>
+        <div class="design-system-element">
+          <Button color="secondary">
+            Add account
+            <template v-slot:icon-right>
+              <AccountPlusIcon />
+            </template>
+          </Button>
+        </div>
+        <div class="design-system-element">
+          <Button color="danger">
+            Delete
+            <template v-slot:icon-right>
+              <DeleteIcon />
+            </template>
+          </Button>
+        </div>
+      </div>
+    </div>
 
-    <Button>
-      <template v-slot:icon-left>
-        <CartPlusIcon />
-      </template>
-      Add to shoppingcart
-    </Button>
-
-    <Button>
-      <template v-slot:icon-left>
-        <AccountPlusIcon />
-      </template>
-      Add account
-    </Button>
-
-    <Button>
-      <template v-slot:icon-left>
-        <PrinterIcon />
-      </template>
-      Print
-    </Button>
-
-    <Button>
-      <template v-slot:icon-left>
-        <PhoneIcon />
-      </template>
-      Call
-    </Button>
+    <div class="design-system-element-row">
+      <div class="design-system-element-row__description">
+        <strong>No shadow</strong>
+        <p>
+          If you don't want a shadow you can remove the box-shadow by adding the
+          <code>disable-shadow</code> prop.
+        </p>
+      </div>
+      <div class="design-system-element-row__content">
+        <div class="design-system-element">
+          <Button disable-shadow color="primary" />
+        </div>
+      </div>
+    </div>
   </Page>
 </template>
 
@@ -155,9 +233,8 @@ import Button from "@/components/Button.vue";
 
 import AccountIcon from "vue-material-design-icons/Account.vue";
 import CartPlusIcon from "vue-material-design-icons/CartPlus.vue";
-import PrinterIcon from "vue-material-design-icons/Printer.vue";
 import AccountPlusIcon from "vue-material-design-icons/AccountPlus.vue";
-import PhoneIcon from "vue-material-design-icons/Phone.vue";
+import DeleteIcon from "vue-material-design-icons/Delete.vue";
 
 export default {
   name: "Home",
@@ -166,24 +243,8 @@ export default {
     Page,
     AccountIcon,
     CartPlusIcon,
-    PrinterIcon,
     AccountPlusIcon,
-    PhoneIcon,
+    DeleteIcon,
   },
 };
 </script>
-
-<style lang="scss">
-.design-system-element-row {
-  display: flex;
-}
-
-.design-system-element {
-  min-width: 15em;
-  margin-bottom: 2em;
-  code {
-    margin-bottom: 1em;
-    display: block;
-  }
-}
-</style>
