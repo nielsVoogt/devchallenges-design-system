@@ -5,10 +5,10 @@
       <div class="design-system-element-row__description">
         <strong>Variants</strong>
         <p>
-          There are three button variants that you can use. You can change the button variant by adding the
+          There are three button variants that you can use. You can change the
+          button variant by adding the
           <code>variant</code> prop, this prop accepts the following variants:
-          <code>default</code>,
-          <code>outline</code> and
+          <code>default</code>, <code>outline</code> and
           <code>text</code>
         </p>
       </div>
@@ -52,10 +52,10 @@
       <div class="design-system-element-row__description">
         <strong>Sizing</strong>
         <p>
-          There are three button sizes that you can use. You can change the button size by adding the
+          There are three button sizes that you can use. You can change the
+          button size by adding the
           <code>size</code> prop, this prop accepts the following sizes:
-          <code>sm</code>,
-          <code>md</code> and
+          <code>sm</code>, <code>md</code> and
           <code>lg</code>
         </p>
       </div>
@@ -77,11 +77,10 @@
       <div class="design-system-element-row__description">
         <strong>Colors</strong>
         <p>
-          There are five button colors. You can change the button color by adding the
+          There are five button colors. You can change the button color by
+          adding the
           <code>color</code> prop, this prop accepts the following colors:
-          <code>default</code>,
-          <code>primary</code>,
-          <code>secondary</code> and
+          <code>default</code>, <code>primary</code>, <code>secondary</code> and
           <code>danger</code>
         </p>
       </div>
@@ -133,9 +132,10 @@
       <div class="design-system-element-row__description">
         <strong>Icons</strong>
         <p>
-          Icons are not bound to the button component. There are two named slots available for icon alignment,
-          <code>icon-left</code> and
-          <code>icon-right</code>. Use these slots to add the icon you need, icons inherit size and color.
+          Icons are not bound to the button component. There are two named slots
+          available for icon alignment,
+          <code>icon-left</code> and <code>icon-right</code>. Use these slots to
+          add the icon you need, icons inherit size and color.
         </p>
       </div>
       <div class="design-system-element-row__content">
@@ -226,8 +226,6 @@
 </template>
 
 <script>
-import "vue-material-design-icons/styles.css";
-
 import Page from "@/components/Page.vue";
 import Button from "@/components/Button.vue";
 
@@ -235,6 +233,8 @@ import AccountIcon from "vue-material-design-icons/Account.vue";
 import CartPlusIcon from "vue-material-design-icons/CartPlus.vue";
 import AccountPlusIcon from "vue-material-design-icons/AccountPlus.vue";
 import DeleteIcon from "vue-material-design-icons/Delete.vue";
+
+import "vue-material-design-icons/styles.css";
 
 export default {
   name: "Home",
