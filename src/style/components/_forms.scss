@@ -1,0 +1,115 @@
+// -------- INPUT STYLE
+
+input[type="text"],
+input[type="password"],
+textarea {
+  border: 1px solid #828282;
+  border-radius: 8px;
+  padding: 1em;
+  outline: none;
+  font: inherit;
+  color: #333333;
+
+  &:hover {
+    border-color: #333333;
+  }
+
+  &:focus {
+    border-color: #2962ff;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #828282;
+  }
+
+  &:-ms-input-placeholder {
+    color: #828282;
+  }
+
+  &::placeholder {
+    color: #828282;
+  }
+
+  &[disabled] {
+    background: #f2f2f2;
+    border: 1px solid #e0e0e0;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 5em;
+  height: 10em;
+}
+
+// -------- FORM GROUP STYLES
+
+.form-group {
+  font-size: 0.875rem;
+  $this: &;
+
+  &__label {
+    color: #333333;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+
+  &__input-container {
+    font-size: 0.875rem;
+    position: relative;
+  }
+
+  &__help {
+    font-size: 0.75rem;
+    color: #828282;
+  }
+
+  // ---------- ICON SIZING AND POSITION
+
+  .material-design-icon {
+    color: #828282;
+    height: 1.5em;
+    left: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5em;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  // ---------- MODIFIERS
+
+  &--has-error {
+    input {
+      border: 1px solid #d32f2f;
+    }
+
+    #{$this}__label,
+    #{$this}__help {
+      color: #d32f2f;
+    }
+  }
+
+  &--has-icon {
+    input[type="text"] {
+      padding-left: 3em;
+    }
+  }
+
+  &--icon-right {
+    input[type="text"] {
+      padding-left: 1em;
+      padding-right: 3em;
+    }
+
+    .material-design-icon {
+      left: auto;
+      right: 1em;
+    }
+  }
+}

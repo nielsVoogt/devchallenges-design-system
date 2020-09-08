@@ -59,6 +59,7 @@
       color: #a9a9a9;
       font-size: 0.875rem;
       margin-block-start: 2em;
+      margin-block-end: 2em;
     }
   }
 }
@@ -84,7 +85,7 @@
     display: flex;
     margin-block-start: 2em;
 
-    * + * {
+    > * + * {
       margin-inline-start: 2em;
     }
   }
