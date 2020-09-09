@@ -8,8 +8,9 @@
           There are three button variants that you can use. You can change the
           button variant by adding the
           <code>variant</code> prop, this prop accepts the following variants:
-          <code>default</code>, <code>outline</code> and
-          <code>text</code>
+          <code>default</code>,
+          <code>outline</code> and
+          <code>text</code>.
         </p>
       </div>
       <div class="design-system-element-row__content">
@@ -31,7 +32,7 @@
         <strong>Disabled</strong>
         <p>
           Every button variant can be disabled by adding the
-          <code>disabled</code> attribute
+          <code>disabled</code> attribute.
         </p>
       </div>
       <div class="design-system-element-row__content">
@@ -55,8 +56,9 @@
           There are three button sizes that you can use. You can change the
           button size by adding the
           <code>size</code> prop, this prop accepts the following sizes:
-          <code>sm</code>, <code>md</code> and
-          <code>lg</code>
+          <code>sm</code>,
+          <code>md</code> and
+          <code>lg</code>.
         </p>
       </div>
       <div class="design-system-element-row__content">
@@ -80,8 +82,10 @@
           There are five button colors. You can change the button color by
           adding the
           <code>color</code> prop, this prop accepts the following colors:
-          <code>default</code>, <code>primary</code>, <code>secondary</code> and
-          <code>danger</code>
+          <code>default</code>,
+          <code>primary</code>,
+          <code>secondary</code> and
+          <code>danger</code>.
         </p>
       </div>
       <div class="design-system-element-row__content">
@@ -134,7 +138,8 @@
         <p>
           Icons are not bound to the button component. There are two named slots
           available for icon alignment,
-          <code>icon-left</code> and <code>icon-right</code>. Use these slots to
+          <code>icon-left</code> and
+          <code>icon-right</code>. Use these slots to
           add the icon you need, icons inherit size and color.
         </p>
       </div>

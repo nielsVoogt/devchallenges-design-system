@@ -2,25 +2,33 @@
 
 .design-system {
   $design-system-padding: 2.5em;
-  display: grid;
-  grid-template-columns: 15em auto;
+  $design-system-navigation-width: 15em;
   height: 100%;
 
   // ------------------ NAVIGATION
 
   &__navigation {
     background: #fafbfd;
+    bottom: 0;
+    left: 0;
     padding: $design-system-padding;
+    position: fixed;
+    top: 0;
+    width: $design-system-navigation-width;
+    z-index: 1;
 
-    svg {
+    .logo {
+      margin-bottom: 2em;
+      width: 150px;
+      height: 20px;
       display: block;
-      margin-block-end: 2em;
-      width: 7.5em;
+      background: url("./assets/devchallenges-logo.svg") no-repeat center
+        center/contain;
     }
 
     nav {
-      margin-inline-start: -1em;
-      margin-inline-end: -1em;
+      margin-left: -1em;
+      margin-right: -1em;
 
       a {
         color: #9e9e9e;
@@ -42,24 +50,27 @@
   // ------------------ CONTENT
 
   &__content {
-    overflow-x: auto;
-    overflow-y: scroll;
-    padding: $design-system-padding;
+    padding-left: $design-system-navigation-width;
+    position: relative;
+
+    article {
+      padding: $design-system-padding;
+    }
 
     header {
-      margin-block-end: 3em;
+      margin-bottom: 3em;
 
       h1 {
         font-size: 1.5rem;
-        margin-block-start: -0.5em;
+        margin-top: -0.5em;
       }
     }
 
     footer {
       color: #a9a9a9;
       font-size: 0.875rem;
-      margin-block-start: 2em;
-      margin-block-end: 2em;
+      margin-top: 2em;
+      margin-bottom: 2em;
     }
   }
 }
@@ -68,7 +79,7 @@
 
 .design-system-element-row {
   border-bottom: 1px solid #ececec;
-  margin-block-end: 2em;
+  margin-bottom: 2em;
   padding: 0 0 2em;
 
   &__description {
@@ -77,16 +88,28 @@
 
     strong {
       display: block;
-      margin-block-end: 0.25em;
+      margin-bottom: 0.25em;
     }
   }
 
   &__content {
     display: flex;
-    margin-block-start: 2em;
+    margin-top: 2em;
 
     > * + * {
-      margin-inline-start: 2em;
+      margin-left: 2em;
     }
+  }
+}
+
+// ------------------ DESIGN SYSTEM ELEMENT
+
+.design-system-element {
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  &--fixed-width {
+    width: 275px;
   }
 }

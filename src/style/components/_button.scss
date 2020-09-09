@@ -22,11 +22,6 @@ button {
   cursor: pointer;
   padding: 1ex 1em;
 
-  $color-default: #e0e0e0;
-  $color-primary: #2962ff;
-  $color-secondary: #455a64;
-  $color-danger: #d32f2f;
-
   // ---- DEFAULT STYLES
 
   background: $color-default;
@@ -40,7 +35,7 @@ button {
 
   .material-design-icon + span,
   span + .material-design-icon {
-    margin-inline-start: 0.25em;
+    margin-left: 0.25em;
   }
 
   // -------------- COLOR

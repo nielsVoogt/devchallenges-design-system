@@ -1,3 +1,15 @@
+@mixin placeholderColor($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}
+
 // -------- INPUT STYLE
 
 input[type="text"],
@@ -8,32 +20,22 @@ textarea {
   padding: 1em;
   outline: none;
   font: inherit;
-  color: #333333;
+  color: $color-input;
 
   &:hover {
-    border-color: #333333;
+    border-color: $color-input;
   }
 
   &:focus {
-    border-color: #2962ff;
-  }
-
-  &::-webkit-input-placeholder {
-    color: #828282;
-  }
-
-  &:-ms-input-placeholder {
-    color: #828282;
-  }
-
-  &::placeholder {
-    color: #828282;
+    border-color: $color-primary;
   }
 
   &[disabled] {
     background: #f2f2f2;
     border: 1px solid #e0e0e0;
   }
+
+  @include placeholderColor(#828282);
 }
 
 textarea {
@@ -46,10 +48,12 @@ textarea {
 
 .form-group {
   font-size: 0.875rem;
+  display: block;
+  margin-bottom: 1.5em;
   $this: &;
 
   &__label {
-    color: #333333;
+    color: $color-input;
     display: block;
     font-weight: 500;
     margin-bottom: 0.5em;
@@ -58,23 +62,26 @@ textarea {
   &__input-container {
     font-size: 0.875rem;
     position: relative;
+
+    input,
+    textarea {
+      width: 100%;
+    }
   }
 
   &__help {
     font-size: 0.75rem;
-    color: #828282;
+    color: lighten($color-input, 30%);
   }
 
-  // ---------- ICON SIZING AND POSITION
+  // ---------- ICON POSITION
 
   .material-design-icon {
-    color: #828282;
-    height: 1.5em;
-    left: 1em;
+    color: lighten($color-input, 30%);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 1.5em;
+    left: 1em;
 
     svg {
       height: 100%;
@@ -82,27 +89,86 @@ textarea {
     }
   }
 
-  // ---------- MODIFIERS
+  // ---------- SIZING
+
+  &--size {
+    @mixin inputSize($font-size, $icon-size) {
+      input,
+      textarea {
+        font-size: $font-size;
+      }
+      .material-design-icon {
+        height: $icon-size;
+        width: $icon-size;
+      }
+    }
+
+    &-sm {
+      @include inputSize(0.75em, 1em);
+    }
+
+    &-md {
+      @include inputSize(1em, 1.5em);
+    }
+
+    &-lg {
+      @include inputSize(1.25em, 2em);
+    }
+  }
+
+  // ---------- COLORS
+
+  &--color {
+    @mixin formColor($color) {
+      input,
+      textarea {
+        color: $color;
+
+        &:focus {
+          border-color: $color;
+        }
+
+        @include placeholderColor(lighten($color, 20%));
+      }
+
+      * {
+        color: $color;
+      }
+    }
+
+    &-primary {
+      @include formColor($color-primary);
+    }
+
+    &-tetriary {
+      @include formColor($color-tetriary);
+    }
+  }
+
+  // ---------- ERROR
 
   &--has-error {
-    input {
-      border: 1px solid #d32f2f;
+    input,
+    textarea {
+      border: 1px solid $color-danger;
     }
 
     #{$this}__label,
     #{$this}__help {
-      color: #d32f2f;
+      color: $color-danger;
     }
   }
 
+  // ---------- ICON
+
   &--has-icon {
-    input[type="text"] {
+    input {
       padding-left: 3em;
     }
   }
 
   &--icon-right {
-    input[type="text"] {
+    input {
       padding-left: 1em;
       padding-right: 3em;
     }

@@ -2,6 +2,8 @@
   <label
     :class="[
       'form-group',
+      `form-group--size-${size}`,
+      color ? `form-group--color-${color}` : '',
       error ? 'form-group--has-error' : '',
       iconRight ? 'form-group--icon-right' : '',
       hasIcon ? 'form-group--has-icon' : '',
@@ -35,6 +37,21 @@ export default {
     error: {
       type: Boolean,
       required: false,
+    },
+    size: {
+      type: String,
+      required: false,
+      default: "md",
+      validator: function (value) {
+        return ["sm", "md", "lg"].indexOf(value) !== -1;
+      },
+    },
+    color: {
+      type: String,
+      required: false,
+      validator: function (value) {
+        return ["primary", "tetriary"].indexOf(value) !== -1;
+      },
     },
   },
   computed: {
